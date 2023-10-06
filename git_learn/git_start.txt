@@ -1,0 +1,274 @@
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 ~
+$ cd /C/Gautam_GIT
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT
+$ ll
+total 0
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT
+$ git init
+Initialized empty Git repository in C:/Gautam_GIT/.git/
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT (master)
+$ git clone https://github.com/GAUTAM411/Practice-Session.git
+Cloning into 'Practice-Session'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT (master)
+$ ll
+total 0
+drwxr-xr-x 1 Administrator 197121 0 Oct  6 17:31 Practice-Session/
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT (master)
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT
+$ cd Practice-Session/
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Gautam_kale.txt
+
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git add -A
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git
+Display all 71 possibilities? (y or n)
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Gautam_kale.txt
+        new file:   README.md
+
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git commit -m "I create a new file - gautam_kale"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Administrator@DESKTOP-FUGQNF4.(none)')
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$  git config --global user.email "gautamjkale358@gmail.com"
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$  git config --global user.name "gautam"
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git config --list --global
+user.email=gautamjkale358@gmail.com
+user.name=gautam
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git commit -m "I create a new file - gautam_kale"
+[master (root-commit) 6252589] I create a new file - gautam_kale
+ 2 files changed, 1 insertion(+)
+ create mode 100644 Gautam_kale.txt
+ create mode 100644 README.md
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git branch test
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git branch -a
+  main
+* master
+  test
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (master)
+$ git checkout test
+Switched to branch 'test'
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git push origin test
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git branch -a
+  main
+  master
+* test
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git status
+On branch test
+nothing to commit, working tree clean
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ ll
+total 1
+-rw-r--r-- 1 Administrator 197121  0 Oct  6 17:35 Gautam_kale.txt
+-rw-r--r-- 1 Administrator 197121 18 Oct  6 17:31 README.md
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git add .
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git commit -m "I update a new file - gautam_kale"
+On branch test
+nothing to commit, working tree clean
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git push origin test
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git push origin https://github.com/GAUTAM411/Practice-Session.git
+fatal: invalid refspec 'https://github.com/GAUTAM411/Practice-Session.git'
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git push origin test:https://github.com/GAUTAM411/Practice-Session.git
+fatal: invalid refspec 'test:https://github.com/GAUTAM411/Practice-Session.git'
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git remote add origin https://github.com/GAUTAM411/Practice-Session.git
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git push origin test
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 290 bytes | 290.00 KiB/s, done.
+Total 4 (delta 0), reused 1 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/GAUTAM411/Practice-Session/pull/new/test
+remote:
+To https://github.com/GAUTAM411/Practice-Session.git
+ * [new branch]      test -> test
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ ll
+total 1
+-rw-r--r-- 1 Administrator 197121  0 Oct  6 17:35 Gautam_kale.txt
+-rw-r--r-- 1 Administrator 197121 18 Oct  6 17:31 README.md
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git status
+On branch test
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Gautam_kale.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git add .
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git commit -m "i modified gautam_kale.txt"
+[test e810801] i modified gautam_kale.txt
+ 1 file changed, 1 insertion(+)
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git status
+On branch test
+nothing to commit, working tree clean
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git push origin test
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/GAUTAM411/Practice-Session.git
+   6252589..e810801  test -> test
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
+$ git log
+commit e8108018f987cc3ee9ca99ff433abe513d599272 (HEAD -> test, origin/test)
+Author: gautam <gautamjkale358@gmail.com>
+Date:   Fri Oct 6 18:02:19 2023 +0530
+
+    i modified gautam_kale.txt
+
+commit 6252589c615d158839c6e25f92f378d857df6c0d (master)
+Author: gautam <gautamjkale358@gmail.com>
+Date:   Fri Oct 6 17:45:19 2023 +0530
+
+    I create a new file - gautam_kale
+
+Administrator@DESKTOP-FUGQNF4 MINGW64 /C/Gautam_GIT/Practice-Session (test)
